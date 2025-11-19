@@ -1,4 +1,5 @@
 import { Component, Search, ShoppingCart } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 export default function Navbar() {
@@ -9,12 +10,12 @@ export default function Navbar() {
           
           {/* Left: Logo + Nav links */}
           <div className="flex items-center gap-8">
-            <div className="flex items-center gap-2 text-text-light-primary">
+            <Link href={'/'} className="flex items-center gap-2 text-text-light-primary">
               <span className="material-symbols-outlined text-primary text-3xl">
                 <Component />
               </span>
               <h2 className="text-xl font-bold">Di-Boss</h2>
-            </div>
+            </Link>
 
             <nav className="hidden md:flex items-center gap-6">
               <a className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">
@@ -48,18 +49,18 @@ export default function Navbar() {
 
           {/* Right: Icons + Buttons */}
           <div className="flex items-center gap-4">
-            <button className="relative p-2 rounded-full hover:bg-gray-100 transition-colors">
+            <Link href={"/cart"} className="relative p-2 rounded-full hover:bg-gray-100 transition-colors">
               <span className="material-symbols-outlined">
                 <ShoppingCart />
               </span>
               <span className="absolute top-0 right-0 h-4 w-4 rounded-full bg-secondary text-white text-xs font-bold flex items-center justify-center">
                 3
               </span> 
-            </button>
+            </Link>
 
-            <button className="hidden md:flex min-w-[84px] items-center justify-center rounded-lg h-12 px-5 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity">
+            <Link href={"/login"} className="hidden md:flex min-w-[84px] items-center justify-center rounded-lg h-12 px-5 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity">
               <span className="truncate">Login / Sign Up</span>
-            </button>
+            </Link>
 
             <button className="md:hidden p-2 rounded-full hover:bg-gray-100 transition-colors">
               <span className="material-symbols-outlined">menu</span>
