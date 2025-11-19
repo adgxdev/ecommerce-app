@@ -1,4 +1,4 @@
-import { Component, Search, ShoppingCart } from "lucide-react";
+import { Component, Menu, Search, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -18,18 +18,18 @@ export default function Navbar() {
             </Link>
 
             <nav className="hidden md:flex items-center gap-6">
-              <a className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">
+              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">
                 Websites
-              </a>
-              <a className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">
+              </Link>
+              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">
                 Apps
-              </a>
-              <a className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">
+              </Link>
+              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">
                 APIs
-              </a>
-              <a className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">
+              </Link>
+              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">
                 AI Tools
-              </a>
+              </Link>
             </nav>
           </div>
 
@@ -63,7 +63,7 @@ export default function Navbar() {
             </Link>
 
             <button className="md:hidden p-2 rounded-full hover:bg-gray-100 transition-colors">
-              <span className="material-symbols-outlined">menu</span>
+              <span className="material-symbols-outlined"><Menu className="h-5 w-5" /></span>
             </button>
           </div>
 

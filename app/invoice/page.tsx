@@ -1,5 +1,6 @@
 import { Download, Printer } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function InvoicePage() {
   return (
@@ -26,12 +27,12 @@ export default function InvoicePage() {
               </div>
 
               <div className="flex gap-8">
-                <a
-                  href="#"
+                <Link
+                  href="/marketplace"
                   className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary transition-colors"
                 >
                   Back to Store
-                </a>
+                </Link>
               </div>
             </header>
           </div>
