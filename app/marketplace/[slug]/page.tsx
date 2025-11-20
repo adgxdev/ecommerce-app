@@ -1,8 +1,9 @@
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/home/WhatsAppBtn";
 import Navbar from "@/components/Navbar";
+import ProductCard from "@/components/ProductCard";
 import { products } from "@/utils";
-import { ChevronDown, ShoppingCart } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 // Helper: get products by slug
 function getProducts(slug: string) {
@@ -63,42 +64,7 @@ export default async function CategoryPage({
             {/* Product Cards Grid */}
             <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {items.map((product, i) => (
-                <div
-                  key={i}
-                  className="group flex flex-col overflow-hidden rounded-xl border border-border-light bg-background-light shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg/50"
-                >
-                  <div className="relative">
-                    <div
-                      className="aspect-video w-full bg-cover bg-center"
-                      style={{ backgroundImage: `url('${product.img}')` }}
-                    />
-                    <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent" />
-                  </div>
-
-                  <div className="flex flex-1 flex-col p-4">
-                    <h3 className="font-semibold">{product.title}</h3>
-                    <p className="mt-1 text-sm text-text-secondary-light">
-                      {product.desc}
-                    </p>
-                    <p className="mt-4 text-lg font-bold text-primary">
-                      {product.price}
-                    </p>
-
-                    <div className="mt-4 grid grid-cols-2 gap-2">
-                      <button className="flex h-9 items-center justify-center rounded-lg bg-primary/10 text-sm font-semibold text-primary transition-colors hover:bg-primary/20">
-                        Preview
-                      </button>
-                      <button className="flex h-9 items-center justify-center rounded-lg bg-primary/10 text-sm font-semibold text-primary transition-colors hover:bg-primary/20">
-                        Live Demo
-                      </button>
-                    </div>
-
-                    <button className="mt-2 flex h-10 w-full items-center justify-center gap-2 rounded-lg bg-primary text-sm font-bold text-white transition-opacity hover:opacity-90">
-                      <ShoppingCart className="h-5 w-5" />
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
+                <ProductCard key={i} product={product} />
               ))}
             </div>
           </section>

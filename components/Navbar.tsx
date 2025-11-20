@@ -1,9 +1,20 @@
+'use client';
+import { useCart } from "@/context/CartContext";
 import { Menu, Search, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
+  const { count } = useCart();
+  const [mounted, setMounted] = useState(false);
+
+  // mark component as mounted on client (deferred to avoid cascading render)
+  useEffect(() => {
+    const timer = setTimeout(() => setMounted(true), 0);
+    return () => clearTimeout(timer);
+  }, []);
+  
   return (
     <header className="sticky top-0 z-50 bg-background-light/80 backdrop-blur-sm border-b border-gray-200">
       <div className="container mx-auto px-4">
@@ -53,12 +64,12 @@ export default function Navbar() {
               <Search className="h-5 w-5" />
             </button>
             <Link href={"/cart"} className="relative p-2 rounded-full hover:bg-gray-100 transition-colors">
-              <span className="material-symbols-outlined">
-                <ShoppingCart />
-              </span>
-              <span className="absolute top-0 right-0 h-4 w-4 rounded-full bg-secondary text-white text-xs font-bold flex items-center justify-center">
-                3
-              </span> 
+              <ShoppingCart className="h-5 w-5" />
+              {mounted && count > 0 && (
+                <span className="absolute top-0 right-0 h-4 w-4 rounded-full bg-secondary text-white text-xs font-bold flex items-center justify-center">
+                  {count}
+                </span>
+              )}
             </Link>
 
             <Link href={"/login"} className="hidden md:flex min-w-[84px] items-center justify-center rounded-lg h-12 px-5 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity">

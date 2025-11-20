@@ -33,7 +33,7 @@ export default function CheckoutPage() {
 
             {/* Payment Methods */}
             <div className="flex flex-col gap-4">
-              
+
               {/* Method 1 */}
               <label className="flex cursor-pointer items-center gap-4 rounded-xl border-2 border-transparent bg-white p-4 shadow-sm has-checked:border-primary has-checked:ring-2 has-checked:ring-primary/20">
                 <input
