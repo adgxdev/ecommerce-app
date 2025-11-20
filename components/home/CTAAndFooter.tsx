@@ -15,7 +15,7 @@ export default function CTAAndFooter() {
             <input
               type="email"
               placeholder="Enter your email address"
-              className="flex-1 h-14 px-5 rounded-lg text-text-light-primary border-none focus:ring-2 focus:ring-white bg-white outline-none"
+              className="md:flex-1 h-14 px-5 rounded-lg text-text-light-primary border-none focus:ring-2 focus:ring-white bg-white outline-none"
             />
             <button
               type="submit"

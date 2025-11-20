@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function FeaturedProducts() {
   return (
     <section className="py-16">
@@ -23,9 +25,9 @@ export default function FeaturedProducts() {
 
             <div className="flex justify-between items-center mt-4">
               <span className="text-xl font-black text-primary">$499</span>
-              <button className="h-10 px-4 bg-primary/10 text-primary text-sm font-bold rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">
+              <Link href={"/product/01"} className="h-10 px-4 bg-primary/10 text-primary text-sm font-bold rounded-lg group-hover:bg-primary group-hover:text-white transition-colors flex justify-center items-center">
                 <span>Live Demo</span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -48,9 +50,9 @@ export default function FeaturedProducts() {
 
             <div className="flex justify-between items-center mt-4">
               <span className="text-xl font-black text-primary">$79</span>
-              <button className="h-10 px-4 bg-primary/10 text-primary text-sm font-bold rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">
+              <Link href={"/product/02"} className="h-10 px-4 bg-primary/10 text-primary text-sm font-bold rounded-lg group-hover:bg-primary group-hover:text-white transition-colors flex justify-center items-center">
                 <span>View Details</span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -73,9 +75,9 @@ export default function FeaturedProducts() {
 
             <div className="flex justify-between items-center mt-4">
               <span className="text-xl font-black text-primary">$129</span>
-              <button className="h-10 px-4 bg-primary/10 text-primary text-sm font-bold rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">
+              <Link href={"/product/01"} className="h-10 px-4 bg-primary/10 text-primary text-sm font-bold rounded-lg group-hover:bg-primary group-hover:text-white transition-colors flex justify-center items-center">
                 <span>Live Demo</span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -98,9 +100,9 @@ export default function FeaturedProducts() {
 
             <div className="flex justify-between items-center mt-4">
               <span className="text-xl font-black text-primary">$99</span>
-              <button className="h-10 px-4 bg-primary/10 text-primary text-sm font-bold rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">
+              <Link href={"/product/01"} className="h-10 px-4 bg-primary/10 text-primary text-sm font-bold rounded-lg group-hover:bg-primary group-hover:text-white transition-colors flex justify-center items-center">
                 <span>View Course</span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>

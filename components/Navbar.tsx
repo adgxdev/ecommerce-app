@@ -1,4 +1,5 @@
-import { Component, Menu, Search, ShoppingCart } from "lucide-react";
+import { Menu, Search, ShoppingCart } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -11,30 +12,29 @@ export default function Navbar() {
           {/* Left: Logo + Nav links */}
           <div className="flex items-center gap-8">
             <Link href={'/'} className="flex items-center gap-2 text-text-light-primary">
-              <span className="material-symbols-outlined text-primary text-3xl">
-                <Component />
-              </span>
-              <h2 className="text-xl font-bold">Di-Boss</h2>
+              <Image src={'/logo.png'} className="h-6 w-22" alt="" height={200} width={300} />
             </Link>
 
             <nav className="hidden md:flex items-center gap-6">
-              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">
+              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="/categories/websites">
                 Websites
               </Link>
-              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">
+              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="/categories/apps">
                 Apps
               </Link>
-              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">
+              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="/categories/apis">
                 APIs
               </Link>
-              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">
+              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="/categories/ai-tools">
                 AI Tools
+              </Link>
+              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="/categories/courses">
+                Courses
               </Link>
             </nav>
           </div>
-
           {/* Center: Search */}
-          <div className="flex-1 flex justify-center px-8">
+          <div className="hidden flex-1 md:flex justify-center px-8">
             <label className="relative w-full max-w-lg">
               <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-text-light-secondary">
                 <Search className="h-5 w-5" />
@@ -42,13 +42,16 @@ export default function Navbar() {
               <input
                 type="search"
                 placeholder="Search for products..."
-                className="w-full h-12 pl-12 pr-4 rounded-lg bg-gray-100 border-transparent focus:border-primary focus:ring-primary placeholder:text-text-light-secondary"
+                className="w-full h-12 pl-12 pr-4 rounded-lg bg-gray-100 border-transparent focus:border-primary focus:ring-primary outline-none placeholder:text-text-light-secondary"
               />
             </label>
           </div>
 
           {/* Right: Icons + Buttons */}
           <div className="flex items-center gap-4">
+            <button className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors">
+              <Search className="h-5 w-5" />
+            </button>
             <Link href={"/cart"} className="relative p-2 rounded-full hover:bg-gray-100 transition-colors">
               <span className="material-symbols-outlined">
                 <ShoppingCart />
