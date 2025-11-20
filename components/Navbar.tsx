@@ -12,23 +12,23 @@ export default function Navbar() {
           {/* Left: Logo + Nav links */}
           <div className="flex items-center gap-8">
             <Link href={'/'} className="flex items-center gap-2 text-text-light-primary">
-              <Image src={'/logo.png'} className="h-6 w-22" alt="" height={200} width={300} />
+              <Image src={'/logo.png'} className="h-6 w-22 md:mb-1" alt="" height={200} width={300} />
             </Link>
 
             <nav className="hidden md:flex items-center gap-6">
-              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="/categories/websites">
+              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="/marketplace/websites">
                 Websites
               </Link>
-              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="/categories/apps">
+              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="/marketplace/apps">
                 Apps
               </Link>
-              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="/categories/apis">
+              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="/marketplace/apis">
                 APIs
               </Link>
-              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="/categories/ai-tools">
+              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="/marketplace/ai-tools">
                 AI Tools
               </Link>
-              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="/categories/courses">
+              <Link className="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="/marketplace/courses">
                 Courses
               </Link>
             </nav>

@@ -1,4 +1,6 @@
 import { Check, Download } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function PaymentSuccessPage() {
   return (
@@ -6,23 +8,17 @@ export default function PaymentSuccessPage() {
       {/* Header */}
       <header className="flex items-center justify-between whitespace-nowrap px-4 py-5 sm:px-6 max-w-[960px] w-full mx-auto">
         <div className="flex items-center gap-4 text-text-light-primary">
-          <div className="size-6 text-primary">
-            <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </div>
-          <h2 className="text-xl font-bold tracking-[-0.015em]">Di-Boss</h2>
+          <Link href={'/'} className="flex items-center gap-2 text-text-light-primary">
+            <Image src={'/logo.png'} className="h-6 w-22 md:mb-1" alt="" height={200} width={300} />
+          </Link>
         </div>
 
-        <a
+        <Link
           href="#"
           className="flex min-w-[84px] items-center justify-center rounded-lg h-10 px-4 bg-primary/10 text-primary text-sm font-bold hover:bg-primary/20"
         >
           My Account
-        </a>
+        </Link>
       </header>
 
       {/* Main Content */}
@@ -77,12 +73,12 @@ export default function PaymentSuccessPage() {
                 <span>Download Files</span>
               </button>
 
-              <a
+              <Link
                 href="#"
                 className="flex w-full h-12 items-center justify-center rounded-lg px-6 bg-primary/10 text-primary font-bold hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30"
               >
                 Go to My Purchases
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -91,8 +87,8 @@ export default function PaymentSuccessPage() {
       {/* Footer */}
       <footer className="text-center text-sm text-text-light-secondary dark:text-text-dark-secondary py-8">
         <div className="flex items-center justify-center gap-6">
-          <a className="hover:text-primary dark:hover:text-primary" href="#">Help & Support</a>
-          <a className="hover:text-primary dark:hover:text-primary" href="#">Contact Us</a>
+          <Link className="hover:text-primary dark:hover:text-primary" href="#">Help & Support</Link>
+          <Link className="hover:text-primary dark:hover:text-primary" href="#">Contact Us</Link>
         </div>
         <p className="mt-4">© 2024 Di-Boss. All rights reserved.</p>
       </footer>

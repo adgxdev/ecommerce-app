@@ -14,99 +14,99 @@ const DigitalProductsPage: React.FC = () => {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
             {/* Filters Sidebar */}
             <aside className="col-span-1">
-            <div className="sticky top-24 rounded-xl border border-border-light bg-background-light p-4 shadow-sm">
-                <div className="mb-4 flex items-center justify-between">
-                <h3 className="text-lg font-semibold">Filters</h3>
-                <p className="text-sm text-text-secondary-light">
-                    Refine your search
-                </p>
-                </div>
-                <div className="flex flex-col">
-                {/* Category Filter */}
-                <details className="flex flex-col border-t border-border-light py-2 group" open>
-                    <summary className="flex cursor-pointer items-center justify-between gap-6 py-2">
-                    <p className="text-sm font-medium">Category</p>
-                    <span className="material-symbols-outlined text-lg text-text-secondary-light transition-transform group-open:rotate-180">
-                        <ChevronDown />
-                    </span>
-                    </summary>
-                    <div className="pt-2">
-                    {["Websites", "AI Tools", "APIs", "Scripts", "E-Learning"].map((cat, idx) => (
-                        <label key={idx} className="flex items-center gap-x-3 py-1.5">
-                        <input
-                            type="checkbox"
-                            defaultChecked={cat === "AI Tools"}
-                            className="h-4 w-4 rounded-full border-border-light text-primary focus:ring-primary/50 focus:ring-offset-background-light"
-                        />
-                        <p className="text-sm font-normal text-text-secondary-light">
-                            {cat}
-                        </p>
-                        </label>
-                    ))}
+                <div className="sticky top-24 rounded-xl border border-border-light bg-background-light p-4 shadow-sm">
+                    <div className="mb-4 flex items-center justify-between">
+                    <h3 className="text-lg font-semibold">Filters</h3>
+                    <p className="text-sm text-text-secondary-light">
+                        Refine your search
+                    </p>
                     </div>
-                </details>
+                    <div className="flex flex-col">
+                    {/* Category Filter */}
+                    <details className="flex flex-col border-t border-border-light py-2 group" open>
+                        <summary className="flex cursor-pointer items-center justify-between gap-6 py-2">
+                        <p className="text-sm font-medium">Category</p>
+                        <span className="material-symbols-outlined text-lg text-text-secondary-light transition-transform group-open:rotate-180">
+                            <ChevronDown />
+                        </span>
+                        </summary>
+                        <div className="pt-2">
+                        {["Websites", "AI Tools", "APIs", "Scripts", "E-Learning"].map((cat, idx) => (
+                            <label key={idx} className="flex items-center gap-x-3 py-1.5">
+                            <input
+                                type="checkbox"
+                                defaultChecked={cat === "AI Tools"}
+                                className="h-4 w-4 rounded-full border-border-light text-primary focus:ring-primary/50 focus:ring-offset-background-light"
+                            />
+                            <p className="text-sm font-normal text-text-secondary-light">
+                                {cat}
+                            </p>
+                            </label>
+                        ))}
+                        </div>
+                    </details>
 
-                {/* Price Filter */}
-                <details className="flex flex-col border-t border-border-light py-2 group" open>
-                    <summary className="flex cursor-pointer items-center justify-between gap-6 py-2">
-                    <p className="text-sm font-medium">Price</p>
-                    <span className="material-symbols-outlined text-lg text-text-secondary-light transition-transform group-open:rotate-180">
-                        <ChevronDown />
-                    </span>
-                    </summary>
-                    <div className="relative flex w-full flex-col items-start justify-between gap-3 pt-4 pb-2 px-1">
-                    <div className="flex h-[38px] w-full pt-1.5">
-                        <div className="flex h-1.5 w-full rounded-full bg-border-light pl-[10%] pr-[30%]">
-                        <div className="relative">
-                            <div className="absolute -left-3 -top-1.5 flex flex-col items-center">
-                            <div className="size-4 cursor-pointer rounded-full bg-primary ring-2 ring-background-light"></div>
-                            <p className="mt-2 text-xs font-medium text-text-secondary-light">$50</p>
+                    {/* Price Filter */}
+                    <details className="flex flex-col border-t border-border-light py-2 group" open>
+                        <summary className="flex cursor-pointer items-center justify-between gap-6 py-2">
+                        <p className="text-sm font-medium">Price</p>
+                        <span className="material-symbols-outlined text-lg text-text-secondary-light transition-transform group-open:rotate-180">
+                            <ChevronDown />
+                        </span>
+                        </summary>
+                        <div className="relative flex w-full flex-col items-start justify-between gap-3 pt-4 pb-2 px-1">
+                        <div className="flex h-[38px] w-full pt-1.5">
+                            <div className="flex h-1.5 w-full rounded-full bg-border-light pl-[10%] pr-[30%]">
+                            <div className="relative">
+                                <div className="absolute -left-3 -top-1.5 flex flex-col items-center">
+                                <div className="size-4 cursor-pointer rounded-full bg-primary ring-2 ring-background-light"></div>
+                                <p className="mt-2 text-xs font-medium text-text-secondary-light">$50</p>
+                                </div>
+                            </div>
+                            <div className="h-1.5 flex-1 rounded-full bg-linear-to-r from-primary to-secondary"></div>
+                            <div className="relative">
+                                <div className="absolute -right-3 -top-1.5 flex flex-col items-center">
+                                <div className="size-4 cursor-pointer rounded-full bg-primary ring-2 ring-background-light"></div>
+                                <p className="mt-2 text-xs font-medium text-text-secondary-light">$750</p>
+                                </div>
+                            </div>
                             </div>
                         </div>
-                        <div className="h-1.5 flex-1 rounded-full bg-linear-to-r from-primary to-secondary"></div>
-                        <div className="relative">
-                            <div className="absolute -right-3 -top-1.5 flex flex-col items-center">
-                            <div className="size-4 cursor-pointer rounded-full bg-primary ring-2 ring-background-light"></div>
-                            <p className="mt-2 text-xs font-medium text-text-secondary-light">$750</p>
-                            </div>
                         </div>
+                    </details>
+
+                    {/* Type Filter */}
+                    <details className="flex flex-col border-t border-border-light py-2 group">
+                        <summary className="flex cursor-pointer items-center justify-between gap-6 py-2">
+                        <p className="text-sm font-medium">Type</p>
+                        <span className="material-symbols-outlined text-lg text-text-secondary-light transition-transform group-open:rotate-180">
+                            <ChevronDown />
+                        </span>
+                        </summary>
+                        <div className="pt-2">
+                        {["WordPress Theme", "React Component", "Python Script"].map((type, idx) => (
+                            <label key={idx} className="flex items-center gap-x-3 py-1.5">
+                            <input
+                                type="checkbox"
+                                className="h-4 w-4 rounded-full border-border-light text-primary focus:ring-primary/50 focus:ring-offset-background-light"
+                            />
+                            <p className="text-sm font-normal text-text-secondary-light">{type}</p>
+                            </label>
+                        ))}
                         </div>
+                    </details>
                     </div>
-                    </div>
-                </details>
 
-                {/* Type Filter */}
-                <details className="flex flex-col border-t border-border-light py-2 group">
-                    <summary className="flex cursor-pointer items-center justify-between gap-6 py-2">
-                    <p className="text-sm font-medium">Type</p>
-                    <span className="material-symbols-outlined text-lg text-text-secondary-light transition-transform group-open:rotate-180">
-                        <ChevronDown />
-                    </span>
-                    </summary>
-                    <div className="pt-2">
-                    {["WordPress Theme", "React Component", "Python Script"].map((type, idx) => (
-                        <label key={idx} className="flex items-center gap-x-3 py-1.5">
-                        <input
-                            type="checkbox"
-                            className="h-4 w-4 rounded-full border-border-light text-primary focus:ring-primary/50 focus:ring-offset-background-light"
-                        />
-                        <p className="text-sm font-normal text-text-secondary-light">{type}</p>
-                        </label>
-                    ))}
+                    {/* Filter Buttons */}
+                    <div className="mt-6 flex flex-col gap-2 border-t border-border-light pt-6">
+                    <button className="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-primary px-4 text-sm font-bold text-white transition-all hover:bg-opacity-90">
+                        Apply Filters
+                    </button>
+                    <button className="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-transparent px-4 text-sm font-bold text-text-secondary-light ring-1 ring-border-light hover:bg-primary/10">
+                        Reset
+                    </button>
                     </div>
-                </details>
                 </div>
-
-                {/* Filter Buttons */}
-                <div className="mt-6 flex flex-col gap-2 border-t border-border-light pt-6">
-                <button className="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-primary px-4 text-sm font-bold text-white transition-all hover:bg-opacity-90">
-                    Apply Filters
-                </button>
-                <button className="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-transparent px-4 text-sm font-bold text-text-secondary-light ring-1 ring-border-light hover:bg-primary/10">
-                    Reset
-                </button>
-                </div>
-            </div>
             </aside>
 
             {/* Product Grid */}

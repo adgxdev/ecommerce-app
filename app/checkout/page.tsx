@@ -23,11 +23,11 @@ export default function CheckoutPage() {
         <div className="flex flex-col lg:flex-row gap-12 xl:gap-16">
           {/* LEFT: PAYMENT METHODS */}
           <div className="w-full lg:w-2/3">
-            <h1 className="text-[#111827] text-4xl font-black mb-8">
+            <h1 className="text-[#111827] text-2xl md:text-4xl font-black mb-6">
               Checkout
             </h1>
 
-            <h2 className="text-[#111827] text-2xl font-bold mb-4">
+            <h2 className="text-[#111827] text-lg md:text-2xl font-bold mb-4">
               Choose how you want to pay
             </h2>
 

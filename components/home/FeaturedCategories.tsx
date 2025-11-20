@@ -31,7 +31,7 @@ export default function FeaturedCategories() {
               </div>
 
               <h3 className="text-sm md:text-lg font-bold">{item.label}</h3>
-              <Link href={`/categories/${item.slug}`} className="absolute inset-0"></Link>
+              <Link href={`/marketplace/${item.slug}`} className="absolute inset-0"></Link>
             </div>
           );
         })}
